@@ -5,6 +5,7 @@ Description:
 */
 
 public enum EstatsMotorCotxe {
+    //Estats per asignarli al cotxe
     EnMarxa,
     Aturat;
 }

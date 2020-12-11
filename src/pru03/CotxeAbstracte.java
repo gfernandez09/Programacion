@@ -5,6 +5,7 @@ Description:
 */
 
 public abstract class CotxeAbstracte implements InterfaceCotxe {
+    //creació dels atributs que tindrà el cotxe.
     protected String marca;
     protected String model;
     protected TipusCanvi tipuscanvi;

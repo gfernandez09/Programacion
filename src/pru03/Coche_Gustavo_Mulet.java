@@ -13,6 +13,7 @@ public class Coche_Gustavo_Mulet extends CotxeAbstracte {
 
     @Override
     public void arrancarMotor() throws Exception {
+        //Això ho utilitzam per arrancar el motor del cotxe o ja posar-ho aturat.
         if(estatCotxe == EstatsMotorCotxe.Aturat){
             this.estatCotxe = EstatsMotorCotxe.EnMarxa;
             System.out.println("El coche ya está en marcha.");
@@ -22,6 +23,7 @@ public class Coche_Gustavo_Mulet extends CotxeAbstracte {
     }
 
     @Override
+    //mètode per comprovar l'estat del motor que ens dirà si està en marxa o aturat.
     public EstatsMotorCotxe comprovaMotor() {
         return estatCotxe;
     }
@@ -36,6 +38,7 @@ public class Coche_Gustavo_Mulet extends CotxeAbstracte {
     }
 
     @Override
+    //Mètode per aturar el motor del cotxe.
     public void aturarMotor() throws Exception {
         if(estatCotxe.equals(EstatsMotorCotxe.Aturat)){
             throw new Exception("El coche ya está parado.");
