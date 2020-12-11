@@ -69,11 +69,25 @@ public class OperatingSystem {
     public ArrayList<Software> getosSoftware(){
         return osSoftware;
     }
-    public void SoftwareInstallation (Software osSoftware){
-        this.osSoftware.add(osSoftware);
+    public void SoftwareInstallation (Software osSoftware, ComputerClass computer){
+        if(computer.getHard()>osSoftware.getsoftwareSpaceRequirement()&&computer.getRam()>osSoftware.getsoftwareRamMemoryRequirement()){
+            computer.setHard(computer.getHard()-osSoftware.getsoftwareSpaceRequirement());
+            computer.setRam(computer.getRam()-osSoftware.getsoftwareRamMemoryRequirement());
+            this.osSoftware.add(osSoftware);
+        }else{
+            System.out.println("No tienes espacio");
+        }
+
     }
-    public void SoftwareUninstallation (Software osSoftware){
-        this.osSoftware.remove(osSoftware);
+    public void SoftwareUninstallation (Software osSoftware, ComputerClass computer){
+        if(computer.getHard()>osSoftware.getsoftwareSpaceRequirement()&&computer.getRam()>osSoftware.getsoftwareRamMemoryRequirement()){
+            computer.setHard(computer.getHard()+osSoftware.getsoftwareSpaceRequirement());
+            computer.setRam(computer.getRam()+osSoftware.getsoftwareRamMemoryRequirement());
+            this.osSoftware.remove(osSoftware);
+        }else{
+            System.out.println("No tienes espacio");
+        }
+
     }
 
 
