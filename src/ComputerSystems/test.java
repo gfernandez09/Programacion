@@ -36,8 +36,8 @@ public class test {
             System.out.println("El programa actualmente instalado es: " + os1.getosSoftware().get(i).getsoftwareName());
         }
 
-        c1.getOS().SoftwareUninstallation(s1);
-        c1.getOS().SoftwareUninstallation(s2);
+        c1.getOS().SoftwareInstallation(s1);
+        c1.getOS().SoftwareInstallation(s2);
         c1.setHard(c1.getHard()+s2.getsoftwareSpaceRequirement());
         c1.setRam(c1.getRam()+s2.getsoftwareRamMemoryRequirement());
         c1.setHard(c1.getHard()+s1.getsoftwareSpaceRequirement());
