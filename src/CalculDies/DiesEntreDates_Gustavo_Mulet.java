@@ -9,61 +9,61 @@ public class DiesEntreDates_Gustavo_Mulet extends CalcularDiesEntreDates {
         boolean anyDeTraspas;
     @Override
     protected int diesMes(int mes) {
+        int diesDelMes = 0;
         switch(mes){
             case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-                this.diesMes = 31;
+                diesDelMes = 31;
                 break;
             case 2:
-                this.diesMes = 28;
+                diesDelMes = 28;
                 break;
             case 4: case 6: case 9: case 11:
-                this.diesMes = 30;
+                diesDelMes = 30;
         }
-        return this.diesMesInicial;
+        return diesDelMes;
         }
 
     @Override
     protected int diesMesInicial(DataXS dataXS) {
-        this.diesMesInicial = diesMes(dataXS.mes) - dataXS.dia;
-        return diesMesInicial;
+        return diesMes(dataXS.mes) - dataXS.dia;
     }
 
     @Override
     protected int diesMesDesti(DataXS dataXS) {
-             this.diesMesDesti = dataXS.dia;
-             return diesMesDesti;
+             return dataXS.dia;
     }
 
     @Override
     protected int diesResteAnyInicial(DataXS datainicial) {
+        int diesresteinici = 0;
         datainicial.mes++;
         while(datainicial.mes <= 12){
-            this.diesResteAnyInicial += diesMes(datainicial.mes);
+            diesresteinici += diesMes(datainicial.mes);
             datainicial.mes++;
         }
-        return this.diesResteAnyInicial;
+        return diesresteinici;
     }
 
     @Override
     protected int diesResteAnyDesti(DataXS datadesti) {
+        int diesrestefin = 0;
         datadesti.mes--;
         while(datadesti.mes >= 1){
-            this.diesResteAnyDesti += diesMes(datadesti.mes);
+            diesrestefin += diesMes(datadesti.mes);
             datadesti.mes--;
         }
-        return this.diesResteAnyDesti;
+        return diesrestefin;
     }
 
     @Override
     protected int diesNumAnysComplets(DataXS datainicial, DataXS datadesti) {
-        this.diesNumAnysComplets = 365 * ((datadesti.any - datainicial.any) - 1);
-        return this.diesNumAnysComplets;
+        return 365 * ((datadesti.any - datainicial.any) - 1);
     }
 
     @Override
     protected int numDiesPerAnysdeTraspas(DataXS datainicial, DataXS datadesti) {
         int diesTraspas = 0;
-        for(int i = 0; i < ((datadesti.any - datadesti.any)-1); i++){
+        for(int i = 0; i <= ((datadesti.any - datainicial.any)-1); i++){
             if(anyDeTraspas(datainicial.any + i)){
                 diesTraspas++;
             }
