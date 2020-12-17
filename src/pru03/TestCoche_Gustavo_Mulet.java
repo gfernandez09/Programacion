@@ -18,7 +18,8 @@ public class TestCoche_Gustavo_Mulet {
             System.out.println(e.getMessage());
         }
         */
-        CotxeSegonaPart_Gustavo_Mulet m2 = new CotxeSegonaPart_Gustavo_Mulet("BMW", "M2", TipusCanvi.CanviManual, EstatsMotorCotxe.Aturat, marxaAutomatic.N,marxesManual.Primera);
+        //Creació de l'objecte de coche1 el qual es un BMW M2, per això l'hi anomenam m2.
+        CotxeSegonaPart_Gustavo_Mulet m2 = new CotxeSegonaPart_Gustavo_Mulet("BMW","M2",TipusCanvi.CanviManual,EstatsMotorCotxe.EnMarxa, marxaAutomatic.N, marxesManual.N);
              try{
                  System.out.println(m2.getmarxaManual());
                  m2.canviarMarxaManual('+');
@@ -31,7 +32,8 @@ public class TestCoche_Gustavo_Mulet {
         catch(Exception e){
                  System.out.println(e.getMessage());
              }
-        CotxeSegonaPart_Gustavo_Mulet m3 = new CotxeSegonaPart_Gustavo_Mulet("BMW", "M3", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.Aturat, marxaAutomatic.N,marxesManual.N);
+        //Creació de l'objecte de coche1 el qual es un BMW 3, per això l'hi anomenam m3.
+        CotxeSegonaPart_Gustavo_Mulet m3 = new CotxeSegonaPart_Gustavo_Mulet("BMW", "M3", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.EnMarxa, marxaAutomatic.N, marxesManual.N);
         try{
             m3.canviarMarxaAutomatic('+');
             System.out.println(m3.getmarxaAutomatic());
