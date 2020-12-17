@@ -34,10 +34,12 @@ public class ComputerClass {
         this.hardDisk = hardDisk;
     }
     public void OperatingSystemInstall(OperatingSystem operatingSystem){
-        if(operatingSystem != null){
+        if(operatingSystem != null && operatingSystem.getosSpaceRequirement() < this.hardDisk && operatingSystem.getosRamMemoryRequirement() < this.ramMemory){
             this.hardDisk -= operatingSystem.getosSpaceRequirement();
             this.ramMemory -= operatingSystem.getosRamMemoryRequirement();
             this.operatingSystem = operatingSystem;
+        }else{
+            System.out.println("No tienes espacio para instalar el S.O");
         }
     }
     public String getName(){

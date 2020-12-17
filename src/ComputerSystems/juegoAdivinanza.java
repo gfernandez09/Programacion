@@ -17,6 +17,7 @@ public class juegoAdivinanza {
         System.out.println("1- Jugar al juego");
         System.out.println("2- Dejar de jugar y retirar el dinero ganado");
         System.out.println("3- Jugar al juego en versión lite ");
+        System.out.println("4- Consulta el dinero acumulado");
         int comandos = menu.nextInt();
         switch (comandos) {
             case 1:
@@ -34,11 +35,18 @@ public class juegoAdivinanza {
             case 3:
                 jugarJuego2();
                 break;
+            case 4:
+                System.out.println("El dinero total de la maquina es: "+getDineroMaquina());
+                menu();
+                break;
             default:
                 System.out.println("Indique un numero valido porfavor");
                 menu();
         }
 
+    }
+    public int getDineroMaquina(){
+        return this.dineroMaquina;
     }
     public void jugarJuego2() {
         Scanner consola2 = new Scanner(System.in);
@@ -63,7 +71,7 @@ public class juegoAdivinanza {
                 } else {
                     if (numero2 == numeroRandom2) {
                         System.out.println("Has ganado la partida, enhorabuena.");
-                        this.dineroJugador += 3;
+                        this.dineroJugador += 5;
                         bandera = false;
                     } else if (numero2 < numeroRandom2) {
                         System.out.println("El numero es mas grande.");
@@ -97,7 +105,7 @@ public class juegoAdivinanza {
             Random random = new Random();
             int randomnumber = random.nextInt(99 + 1);
             ArrayList<Integer> intentos = new ArrayList<>();
-            System.out.println(randomnumber);
+            //System.out.println(randomnumber);
             boolean bandera = true;
             int i = 5;
             System.out.println("Bienvenido al juego! ");
@@ -120,14 +128,14 @@ public class juegoAdivinanza {
                         System.out.println("El numero es mas pequeño");
                     }
                     if(numero == randomnumber && numero == intentos.get(0)){
-                    System.out.println("Enhorabuena! Por acertarlo a la primera recibes 10 monedas extra");
-                    this.dineroJugador += 10;
+                    System.out.println("Enhorabuena! Por acertarlo a la primera recibes 5 monedas extra");
+                    this.dineroJugador += 5;
                 }else if(numero == randomnumber && numero == intentos.get(1)){
-                    System.out.println("Enhorabuena! Por acertarlo a la segunda recibes 6 monedas extra");
-                    this.dineroJugador += 6;
+                    System.out.println("Enhorabuena! Por acertarlo a la segunda recibes 3 monedas extra");
+                    this.dineroJugador += 3;
                 }else if(numero == randomnumber && numero == intentos.get(2)) {
-                        System.out.println("Enhorabuena! Por acertarlo a la tercera recibes 4 monedas extra");
-                        this.dineroJugador += 4;
+                        System.out.println("Enhorabuena! Por acertarlo a la tercera recibes 2 monedas extra");
+                        this.dineroJugador += 2;
                     } else if(i == 1 && numero != randomnumber){
                     System.out.println("Ha perdido la partida.");
                     bandera = false;

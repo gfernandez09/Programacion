@@ -85,7 +85,7 @@ public class OperatingSystem {
             computer.setRam(computer.getRam()+osSoftware.getsoftwareRamMemoryRequirement());
             this.osSoftware.remove(osSoftware);
         }else{
-            System.out.println("No tienes espacio");
+            System.out.println("No tienes espacio para instalar el S.O");
         }
 
     }
