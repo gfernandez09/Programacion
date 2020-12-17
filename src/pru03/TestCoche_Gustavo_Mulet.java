@@ -18,7 +18,7 @@ public class TestCoche_Gustavo_Mulet {
             System.out.println(e.getMessage());
         }
         */
-        CotxeSegonaPart_Gustavo_Mulet m2 = new CotxeSegonaPart_Gustavo_Mulet("BMW", "M2", TipusCanvi.CanviManual, EstatsMotorCotxe.Aturat, CanviarMarxaAutomatic.N,CanviarMarxaManual.Primera);
+        CotxeSegonaPart_Gustavo_Mulet m2 = new CotxeSegonaPart_Gustavo_Mulet("BMW", "M2", TipusCanvi.CanviManual, EstatsMotorCotxe.Aturat, marxaAutomatic.N,marxesManual.Primera);
              try{
                  System.out.println(m2.getmarxaManual());
                  m2.canviarMarxaManual('+');
@@ -31,7 +31,7 @@ public class TestCoche_Gustavo_Mulet {
         catch(Exception e){
                  System.out.println(e.getMessage());
              }
-        CotxeSegonaPart_Gustavo_Mulet m3 = new CotxeSegonaPart_Gustavo_Mulet("BMW", "M3", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.Aturat, CanviarMarxaAutomatic.N,CanviarMarxaManual.N);
+        CotxeSegonaPart_Gustavo_Mulet m3 = new CotxeSegonaPart_Gustavo_Mulet("BMW", "M3", TipusCanvi.CanviAutomatic, EstatsMotorCotxe.Aturat, marxaAutomatic.N,marxesManual.N);
         try{
             m3.canviarMarxaAutomatic('+');
             System.out.println(m3.getmarxaAutomatic());
