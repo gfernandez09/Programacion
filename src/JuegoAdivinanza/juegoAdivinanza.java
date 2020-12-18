@@ -1,4 +1,4 @@
-package ComputerSystems;/*
+package JuegoAdivinanza;/*
 Created by: Gusito
 Date: 15/12/2020
 Description: 
