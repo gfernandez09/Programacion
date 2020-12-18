@@ -1,7 +1,11 @@
 package CalculDies;/*
 Created by: Gusito
 Date: 16/12/2020
-Description: 
+Description: Com podeu veure aquesta classe només implementa el mètode nombreDiesTotals que a més a més és final i per tant no el podeu modificar. La resta de mètodes els haureu d’implementar vosaltres a la vostra subclasse.
+Per altra banda, se vos adjunta la classe DataXS (amb codi obert) per facilitar el tractament de dates i que és el tipus de dades (per tractar dates) que heu de fer servir durant l’exercici.
+Teniu en compte que per comprovar el correcte funcionament de la vostra subclasse bastarà crear una classe de test que únicament haurà d’invocar nombreDiesTotals.
+OBSERVACIÓ: Per comprovar el nombre de dies entre dues dates i verificar que el vostre codi sigui correcte, podeu fer servir un full de càlcul com el que està adjunt a l’enunciat.
+
 */
 
 public class DiesEntreDates_Gustavo_Mulet extends CalcularDiesEntreDates {
