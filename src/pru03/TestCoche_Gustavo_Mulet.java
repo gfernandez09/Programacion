@@ -24,7 +24,7 @@ public class TestCoche_Gustavo_Mulet {
                  System.out.println(m2.getmarxaManual());
                  m2.canviarMarxaManual('+');
                  System.out.println(m2.getmarxaManual());
-                 m2.canviarMarxaManual('-');
+                 m2.canviarMarxaManual('+');
                  System.out.println(m2.getmarxaManual());
                  m2.canviarMarxaManual('-');
                  System.out.println(m2.getmarxaManual());

@@ -3,7 +3,11 @@ import java.util.*;
 /*
 Created by: Gusito
 Date: 11/12/2020
-Description: 
+Description: A partir dels fitxers i enunciat de l'exercici classe cotxe, heu de crear una altra classe Cotxe fent una subclasse de la classe que féreu a l’exercici classe cotxe anterior, seguint la mateixa nomenclatura (CotxeSegonaPart_nom_llinatge), i que incorpori els mètodes CanviarMarxaAutomatic i CanviarMarxaManual. Els mètodes només poden funcionar si el cotxe és automàtic o manual, respectivament.
+Per canviar les marxes tant en un mètode com a l’altre, haureu de passar un char com a paràmetre. Concretament ‘+’ o ‘-’ per indicar pujar o baixar marxa respectivament.
+El canvi automàtic ha d’implementar les marxes F,N,R i el manual R,N,1,2,3,4,5,6
+Els canvis seran seqüencials (no podem passar, per exemple, de 1 a 4 directament) i les marxes els heu d’implementar com a enum, tal i com vérem a l’exercici anterior.
+
 */
 enum Maleter{
     Obert,Tancat
