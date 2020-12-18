@@ -91,6 +91,7 @@ public class CotxeSegonaPart_Gustavo_Mulet extends Coche_Gustavo_Mulet {
             throw new Exception("El cotxe ha d'estar encès ");
         }
     }
+    //Cream els mètodes per obrir i/o tencar el maleter
     public void obrirMaleter() throws Exception{
         if(this.maleter == maleter.Tancat){
             this.maleter = maleter.Obert;
@@ -105,6 +106,7 @@ public class CotxeSegonaPart_Gustavo_Mulet extends Coche_Gustavo_Mulet {
             throw new Exception("Tens el maleter tancat");
         }
     }
+    //Cream els mètodes per obrir i/o tencar el maleter
     public void obrirPortes() throws Exception{
         if(this.portes == portes.Tancades){
             this.portes = portes.Obertes;
