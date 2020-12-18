@@ -106,7 +106,7 @@ public class CotxeSegonaPart_Gustavo_Mulet extends Coche_Gustavo_Mulet {
             throw new Exception("Tens el maleter tancat");
         }
     }
-    //Cream els mètodes per obrir i/o tencar el maleter
+    //Cream els mètodes per obrir i/o tencar les portes
     public void obrirPortes() throws Exception{
         if(this.portes == portes.Tancades){
             this.portes = portes.Obertes;
