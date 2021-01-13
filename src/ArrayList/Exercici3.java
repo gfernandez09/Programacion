@@ -10,13 +10,15 @@ public class Exercici3 {
     public static void main(String[] args) {
         ArrayList<Integer> arrayNumeros = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-
+        //Creacion del bucle para añadir los numeros al arrayList
         for (int i = 0; i < 10;i++){
             System.out.println("Introduce un numero: ");
             int numeros = sc.nextInt();
             arrayNumeros.add(numeros);
         }
+        //Ordenación de los numeros
         Collections.sort(arrayNumeros);
+        //Print del ArrayList para obtener los numeros
         System.out.println(arrayNumeros);
     }
 }

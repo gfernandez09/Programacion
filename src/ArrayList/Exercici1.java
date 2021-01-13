@@ -10,12 +10,14 @@ Per fer-ho, utilitza un bucle que recorri tot l’ArrayList sense utilitzar cap 
 public class Exercici1 {
     public static void main(String[] args) {
         ArrayList<String> alumnes = new ArrayList<String>();
+        //Añadimos los nombres de los compañeros.
         alumnes.add("Gustavo");
         alumnes.add("Juanma");
         alumnes.add("Joshua");
         alumnes.add("Lluc");
         alumnes.add("Adan");
         alumnes.add("Nico");
+        //Recorremos el arrayList y lo printamos.
         for(String nom : alumnes){
             System.out.print(nom + ",");
         }
