@@ -12,6 +12,7 @@ public class ParkingTest_Gustavo_Mulet {
         boolean bandera = true;
         Scanner consola = new Scanner(System.in);
         String path;
+
         /* EJECUTAMOS UN BUCLE WHILE DE TIPO BANDERA PARA QUE SE EJECUTE HASTA QUE EL USUARIO LO DESEE*/
         /* MENÚ PARA QUE EL USUARIO ELIJA LA OPCION QUE DESEA Y SEGÚN LA OPCIÓN, EJECUTE UN MÉTODO U OTRO */
         while(bandera){
@@ -31,9 +32,14 @@ public class ParkingTest_Gustavo_Mulet {
                 consola.nextLine(); //LIMPIAMOS EL BUFFER DEL SCANNER
                 switch (seleccion) {
                     case 1 -> {
-                        System.out.println("Indique el path del fichero: ");
-                        path = consola.nextLine();
-                        test1.llegirMatricules(path);
+                        if(args.length == 0){
+                            System.out.println("Indique el path del fichero: ");
+                            path = consola.nextLine();
+                            test1.llegirMatricules(path);
+                        }else{
+                            test1.llegirMatricules(args[0]);
+                        }
+
                     }
                     case 2 -> {
                         System.out.println("Indique la matricula del coche: ");
