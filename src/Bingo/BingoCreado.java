@@ -14,8 +14,10 @@ public class BingoCreado {
     public void jugarBingo(){
         Jugadores jugador1 = new Jugadores();
         Jugadores jugador2 = new Jugadores();
+        System.out.println("Cartolina Jugador 1");
         jugador1.generarCartolina();
         System.out.println("\n");
+        System.out.println("Cartolina Jugador 2");
         jugador2.generarCartolina();
         while (!jugador1.cartolina.isEmpty() && !jugador2.cartolina.isEmpty()){
             generadorNumero();
